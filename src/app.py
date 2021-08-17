@@ -13,8 +13,7 @@ api = Api(app)
 
 # DB Settigns
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///" + \
-    os.path.join(basedir, "db.sqlite")
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql+psycopg2://postgres:test001@localhost/postgres"
 
 
 @app.before_first_request
