@@ -6,3 +6,7 @@ class StatusController(Resource):
 
     def get(self):
         return {"msg": "Status OK"}
+
+
+def add_status_resource_table(api):
+    api.add_resource(StatusController, StatusController.url)
